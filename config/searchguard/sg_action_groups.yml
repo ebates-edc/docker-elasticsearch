@@ -1,4 +1,4 @@
-# INDICES
+  # INDICES
 READ:
   - "indices:data/read*"
 WRITE:
@@ -13,6 +13,7 @@ DELETE_INDEX:
 INDEX_OWNER:
   - CREATE_INDEX
   - CRUD
+  - "indices:admin/mapping/*"
 INDEX_ALL:
   - "indices:*"
 
@@ -35,7 +36,7 @@ MONITOR:
   - "cluster:admin/xpack/*"
   - "indices:data/read/mget*"
   - "indices:data/read/msearch*"
-  
+
 
 #SNAPSHOTS
 MANAGE_SNAPSHOTS:

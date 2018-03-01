@@ -1,5 +1,5 @@
 
-PROJECT_ID ?= dev
+PROJECT_ID ?= prod-edc-ew
 
 IMAGE_NAME = gcr.io/$(PROJECT_ID)/es-6-sg:latest
 
@@ -13,7 +13,7 @@ image_push:
 	gcloud docker --project $(PROJECT_ID) -- push $(IMAGE_NAME)
 
 create_template:
-	./cluster-template.sh $(IMAGE_NAME) 
+	./cluster-template.sh $(IMAGE_NAME)
 
 create_instances:
 	./cluster-up.sh $(IMAGE_NAME)

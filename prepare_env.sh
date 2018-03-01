@@ -1,4 +1,4 @@
-sa#!/bin/bash
+#!/bin/bash
 
 export $(cat gce.env | xargs)
 
